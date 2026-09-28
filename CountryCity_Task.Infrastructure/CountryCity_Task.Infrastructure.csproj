@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Persistence\Repositories\CountryRepository.cs~RF15534cee.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CountryCity_Task.Application\CountryCity_Task.Application.csproj" />
+    <ProjectReference Include="..\CountryCity_Task.Domain\CountryCity_Task.Domain.csproj" />
+    <ProjectReference Include="..\CountryCity_Task\CountryCity_Task.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
